@@ -1,10 +1,8 @@
 # leetcode
-leetcode Problems 
+[LeetCode](https://leetcode.com/problemset/all/) Problems 
 
-
-
-| # | Title | Source Code | Explanation | Difficulty |
+| # | Title | Solution Code | Explanation | Difficulty |
 |:---:|:---:|:---:|:---:|:---:|
 | #1|[Two Sum](https://leetcode.com/problems/two-sum/)|[Java](https://github.com/hoachen/leetcode/blob/master/1、Two%20Sum/Solution.java)| |Easy|
-| #4|[Media Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[Java](https://github.com/hoachen/leetcode/blob/master/4%E3%80%81Median%20Of%20Two%20Sorted%20Arrays/Solution.java)|[Hard]|
-| #5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[Java](https://github.com/hoachen/leetcode/blob/master/5、%20Longest%20Palindromic%20Substring/Solution.java)|[Medium]|
+| #4|[Media Of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)|[Java](https://github.com/hoachen/leetcode/blob/master/4%E3%80%81Median%20Of%20Two%20Sorted%20Arrays/Solution.java)| |Hard|
+| #5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|[Java](https://github.com/hoachen/leetcode/blob/master/5、%20Longest%20Palindromic%20Substring/Solution.java)| |Medium|
