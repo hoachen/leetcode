@@ -3,7 +3,7 @@ public class Solution {
     /**
      * Dynamic Programming Solution
      */
-        public String longestPalindromeByDP(String s) {
+        public String longestPalindromeDP(String s) {
             if (s.isEmpty() || s.length() == 1) return s;
             int n = s.length();
             int[][] pArray = new int[n][n];
@@ -36,11 +36,38 @@ public class Solution {
             return s.substring(start, start + maxLen);
         }
 
+        // Expand Around Center solution
+        public String longestPalindromeEAC(String s) {
+            if (s.isEmpty() || s.length() == 1) return s;
+            int start = 0, end = 0, n = s.length(); 
+            for (int i = 0; i < n; i++) { // i is center point
+                int l1 = aroundCenter(s, i, i);
+                int l2 = aroundCenter(s, i, i + 1);
+                int len = Math.max(l1, l2);
+                if (len > end - start + 1) {
+                    start = i - (len - 1)/ 2;
+                    end = i + (len) / 2;
+                }
+            }
+            return s.substring(start, end + 1);
+        } 
 
+        private int aroundCenter(String s, int i , int j) {
+            int l = i;
+            int r = j;
+            while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
+                l--;
+                r++;
+            }
+            return r - l - 1;
+        }
+       
     public static void main(String args[]) {
         String test = "abcba";
         Solution solution = new Solution();
-        String longSubString = solution.longestPalindromeByDP(test);
-        System.out.println(longSubString);
+        String result1 = solution.longestPalindromeDP(test);
+        System.out.println("Solution 1 result:" + result1);
+        String result2 = solution.longestPalindromeEAC(test);
+        System.out.println("Solution 2 result:" + result2);
     }
 }
