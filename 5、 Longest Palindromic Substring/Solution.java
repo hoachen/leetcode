@@ -41,17 +41,22 @@ public class Solution {
             if (s.isEmpty() || s.length() == 1) return s;
             int start = 0, end = 0, n = s.length(); 
             for (int i = 0; i < n; i++) { // i is center point
+                // 中心点为奇数个
                 int l1 = aroundCenter(s, i, i);
+                // 中心点为偶数个 
                 int l2 = aroundCenter(s, i, i + 1);
                 int len = Math.max(l1, l2);
                 if (len > end - start + 1) {
-                    start = i - (len - 1)/ 2;
-                    end = i + (len) / 2;
+                    // 计算开始位置，中心点 - 长度 / 2
+                    start = i - (len - 1) / 2;  
+                    end = i + len / 2;
                 }
+                if (len >= s.length()) break;
             }
             return s.substring(start, end + 1);
         } 
 
+        // 计算长度
         private int aroundCenter(String s, int i , int j) {
             int l = i;
             int r = j;
@@ -59,7 +64,10 @@ public class Solution {
                 l--;
                 r++;
             }
-            return r - l - 1;
+            // 注意条件， 如果满足了还会进入到循环体进行左边自减，右边自加
+            // 此时真实的子串 real left = l + 1, real right = r - 1
+            // 长度为 right - left + 1 = r - 1 - (l + 1) + 1 = l -l - 1
+            return r - l - 1); 
         }
        
     public static void main(String args[]) {
