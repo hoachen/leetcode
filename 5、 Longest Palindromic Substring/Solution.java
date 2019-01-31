@@ -20,7 +20,7 @@ public class Solution {
                     maxLen = 2;
                 }
             }
-            // 便利查看长度为3以上的子串
+            // 查看长度为3以上的子串
             for (int k = 3; k <= n; k++) {
                 for (int left = 0; left + k -1 < n; left++) {  // 限制条件：left最大值是 ： n - 长度 + 1
                     int right = left + k - 1; // 右端点 因为长度 k = rigth - left + 1 
