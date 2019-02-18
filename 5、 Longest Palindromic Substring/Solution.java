@@ -67,7 +67,7 @@ public class Solution {
             // 注意条件， 如果满足了还会进入到循环体进行左边自减，右边自加
             // 此时真实的子串 real left = l + 1, real right = r - 1
             // 长度为 right - left + 1 = r - 1 - (l + 1) + 1 = l -l - 1
-            return r - l - 1); 
+            return (r - l - 1); 
         }
        
     public static void main(String args[]) {
