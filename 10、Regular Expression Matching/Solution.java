@@ -1,7 +1,3 @@
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
-
-import com.sun.corba.se.spi.orbutil.fsm.Guard.Result;
-
 public class Solution {
 
     /**
